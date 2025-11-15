@@ -8,6 +8,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      iconTheme: const IconThemeData(color: Colors.white),
       elevation: 0,
       backgroundColor: Colors.transparent,
       centerTitle: true,
@@ -18,9 +19,9 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.05),
+              color: Colors.white.withValues(alpha: 0.05),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Colors.white.withOpacity(0.1)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
             ),
             child: const Text(
               '🚦 Smart Traffic Controller',
@@ -36,9 +37,8 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
+
   @override
-// TODO: implement preferredSize
+  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
-
-

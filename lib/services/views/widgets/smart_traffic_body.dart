@@ -73,12 +73,12 @@ class SmartTrafficBody extends StatelessWidget {
       margin: EdgeInsets.only(top: circleSize*0.5),
       padding: EdgeInsets.symmetric(vertical: 25,horizontal: circleSize * 0.2),
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.25),
+        color: Colors.black.withValues(alpha:0.25),
         borderRadius: BorderRadius.circular(35),
         border: Border.all(color: Colors.white12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.7),
+            color: Colors.black.withValues(alpha:0.7),
             blurRadius: 25,
             offset: const Offset(0, 8),
           ),
@@ -116,8 +116,8 @@ class SmartTrafficBody extends StatelessWidget {
               ? RadialGradient(
             colors: [
               activeColor,
-              activeColor.withOpacity(0.4),
-              Colors.black.withOpacity(0.2),
+              activeColor.withValues(alpha:0.4),
+              Colors.black.withValues(alpha:0.2),
             ],
             stops: const [0.2, 0.7, 1],
           )
@@ -128,7 +128,7 @@ class SmartTrafficBody extends StatelessWidget {
           boxShadow: light.isOn
               ? [
             BoxShadow(
-              color: activeColor.withOpacity(0.7),
+              color: activeColor.withValues(alpha:0.7),
               blurRadius: 40,
               spreadRadius: 10,
             ),
@@ -144,7 +144,7 @@ class SmartTrafficBody extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.05),
+        color: Colors.white.withValues(alpha:0.05),
         borderRadius: BorderRadius.circular(25),
         border: Border.all(color: Colors.white12),
       ),
@@ -260,7 +260,7 @@ class SmartTrafficBody extends StatelessWidget {
         ),
       ),
       style: ElevatedButton.styleFrom(
-        backgroundColor: enabled ? color.withOpacity(0.85) : Colors.grey.withOpacity(0.3),
+        backgroundColor: enabled ? color.withValues(alpha:0.85) : Colors.grey.withValues(alpha:0.3),
         padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         elevation: 8,
@@ -279,8 +279,8 @@ class SmartTrafficBody extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Colors.black.withOpacity(0.8),
-                  Colors.grey.shade900.withOpacity(0.6),
+                  Colors.black.withValues(alpha:0.8),
+                  Colors.grey.shade900.withValues(alpha:0.6),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -288,7 +288,7 @@ class SmartTrafficBody extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.greenAccent.withOpacity(0.4),
+                  color: Colors.greenAccent.withValues(alpha:0.4),
                   blurRadius: 20,
                   spreadRadius: 3,
                   offset: const Offset(0, 5),
@@ -313,7 +313,7 @@ class SmartTrafficBody extends StatelessWidget {
                     launchUrl(Uri.parse(url));
                   },
                   borderRadius: BorderRadius.circular(20),
-                  splashColor: Colors.greenAccent.withOpacity(0.2),
+                  splashColor: Colors.greenAccent.withValues(alpha:0.2),
                   child: Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -321,7 +321,7 @@ class SmartTrafficBody extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.greenAccent.withOpacity(0.5),
+                          color: Colors.greenAccent.withValues(alpha:0.5),
                           blurRadius: 15,
                           spreadRadius: 2,
                         ),
@@ -343,7 +343,7 @@ class SmartTrafficBody extends StatelessWidget {
           Text(
             "📱 Scan to open the form",
             style: TextStyle(
-              color: Colors.white.withOpacity(0.85),
+              color: Colors.white.withValues(alpha:0.85),
               fontSize: isTablet ? 18 : 15,
               fontWeight: FontWeight.w500,
             ),
@@ -390,7 +390,7 @@ class _PulseGlowState extends State<PulseGlow> with SingleTickerProviderStateMix
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: widget.color.withOpacity(0.4),
+              color: widget.color.withValues(alpha:0.4),
               blurRadius: 40,
               spreadRadius: 20,
             ),

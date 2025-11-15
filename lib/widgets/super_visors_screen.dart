@@ -1,9 +1,8 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
 class SupervisorView extends StatefulWidget {
-  const SupervisorView({super.key});
+  const SupervisorView({super.key}); 
 
   @override
   State<SupervisorView> createState() => _SupervisorViewState();
@@ -37,6 +36,7 @@ class _SupervisorViewState extends State<SupervisorView> with SingleTickerProvid
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -50,6 +50,8 @@ class _SupervisorViewState extends State<SupervisorView> with SingleTickerProvid
         ),
       ),
       body: Container(
+        alignment: Alignment.center,
+        height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -71,8 +73,8 @@ class _SupervisorViewState extends State<SupervisorView> with SingleTickerProvid
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 10),
-
-                  _buildSectionTitle('إشراف المشروع 👩‍🏫'),
+//👩‍🏫
+                  _buildSectionTitle('إشراف المشروع'),
                   const SizedBox(height: 15),
                   _buildSupervisorCard(
                     name: 'أ.د/ أميرة',
@@ -87,8 +89,8 @@ class _SupervisorViewState extends State<SupervisorView> with SingleTickerProvid
                   ),
 
                   const SizedBox(height: 40),
-
-                  _buildSectionTitle('فريق العمل 👨‍💻'),
+//👨‍💻
+                  _buildSectionTitle('فريق العمل'),
                   const SizedBox(height: 15),
                   _buildTeamMemberCard(
                     name: 'أحمد عماد صادق',
@@ -107,7 +109,7 @@ class _SupervisorViewState extends State<SupervisorView> with SingleTickerProvid
                     'كلية التربية النوعية - شعبة إعداد معلم حاسب\nمقرر نظم إدارة التعلم الذكية',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withValues(alpha: 0.8),
                       fontSize: isTablet ? 18 : 15,
                       height: 1.5,
                     ),

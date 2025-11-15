@@ -78,10 +78,10 @@ class SupervisorView extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(24.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(24.0),
                       child: Column(
-                        children: const [
+                        children: [
                           Text(
                             'من خلال هذا القسم يمكنك متابعة حالة النظام ومراقبة أداء وحدات الإضاءة والتحكم بها بشكل مركزي 🔍',
                             textAlign: TextAlign.center,
