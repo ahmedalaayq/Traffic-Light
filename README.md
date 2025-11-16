@@ -31,17 +31,17 @@
 ## 📂 هيكل المشروع
 
 ```
-lib/
-├── main.dart                  # نقطة دخول التطبيق
-├── controllers/               # إدارة حالة الإشارة وStreams
-│   └── traffic_light_controller.dart
-├── widgets/                   # عناصر واجهة قابلة لإعادة الاستخدام
-│   └── light_widget.dart
-├── screens/                   # الشاشات الرئيسية
-│   └── home_screen.dart
-├── utils/                     # أدوات مساعدة (Responsive Text, ThemeHelper)
-└── themes/                    # إعدادات الثيمات (Light, Dark, Glass Effect)
-```
+ lib/
+ ├── main.dart                  #  نقطة دخول التطبيق
+ ├── controllers/               #  إدارة حالة الإشارة وStreams
+ │   └──     traffic_light_controller.dart
+ ├── widgets/                   #  عناصر واجهة قابلة لإعادة الاستخدام
+ │   └── light_widget.dart
+ ├── screens/                   #  الشاشات الرئيسية
+ │   └── home_screen.dart
+ ├── utils/                     #  أدوات مساعدة (Responsive Text,   ThemeHelper)
+ └── themes/                    #  إعدادات الثيمات (Light, Dark, Glass   Effect)
+ ```
 
 ---
 
