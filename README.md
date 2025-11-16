@@ -1,16 +1,118 @@
-# traffic_light
+---
 
-A new Flutter project.
+# 🚦 Traffic Light – تطبيق إشارات المرور بـ Flutter
 
-## Getting Started
+**Traffic Light** هو تطبيق Flutter عملي لمحاكاة إشارات المرور بشكل كامل واحترافي، مع واجهة مستخدم جذابة، تحكم تفاعلي، وتصميم متجاوب لجميع الأجهزة (موبايل، تابلت، ويب).
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ نظرة عامة عن المشروع
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* محاكاة ثلاث ألوان لإشارة المرور: **🔴 أحمر, 🟡 أصفر, 🟢 أخضر**
+* تحكم يدوي وتبديل تلقائي بين الألوان
+* واجهة **نظيفة وجذابة** مع **تأثير الزجاج (Glass Effect)**
+* تجربة تعليمية ممتازة لتعلم **دورة حياة الودجت** وإدارة الحالة باستخدام **Streams وControllers**
+* تصميم متجاوب يدعم اختلاف حجم الشاشات مع نصوص قابلة للتكيف بدقة
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 الميزات الرئيسية
+
+| الميزة                     | الوصف                                                             |
+| -------------------------- | ----------------------------------------------------------------- |
+| 🔴🟡🟢 **الألوان والحركة** | الانتقال بين الألوان مع أنيميشن سلس، عرض اللون الحالي بشكل واضح   |
+| ✋ **التحكم اليدوي**        | تغيير الألوان بالضغط على الشاشة أو الأزرار                        |
+| 🌟 **واجهة جذابة**         | Glass Effect وترتيب نظيف بدون مسافات غير ضرورية                   |
+| 📱 **تصميم متجاوب**        | يدعم Mobile, Tablet, Web مع ضبط النصوص تلقائيًا                   |
+| 🧩 **هيكلية كود واضحة**    | فصل الواجهة عن المنطق، استخدام Streams لتحديث الواجهة بشكل تفاعلي |
+
+---
+
+## 📂 هيكل المشروع
+
+```
+lib/
+├── main.dart                  # نقطة دخول التطبيق
+├── controllers/               # إدارة حالة الإشارة وStreams
+│   └── traffic_light_controller.dart
+├── widgets/                   # عناصر واجهة قابلة لإعادة الاستخدام
+│   └── light_widget.dart
+├── screens/                   # الشاشات الرئيسية
+│   └── home_screen.dart
+├── utils/                     # أدوات مساعدة (Responsive Text, ThemeHelper)
+└── themes/                    # إعدادات الثيمات (Light, Dark, Glass Effect)
+```
+
+---
+
+## ⚙️ المكونات التفصيلية
+
+### 1️⃣ Controllers
+
+* إدارة الحالة الحالية للإشارة
+* استخدام **Streams وStreamController** لتحديث الواجهة
+* دوال لتغيير اللون يدويًا أو تلقائيًا
+
+### 2️⃣ Widgets
+
+* `LightWidget` لكل لون، مع دعم **الأنيميشن والتحولات**
+* واجهة مرنة قابلة لإعادة الاستخدام
+
+### 3️⃣ Screens
+
+* `HomeScreen` يعرض الإشارة بالكامل
+* واجهة تحكم واضحة وبسيطة
+
+### 4️⃣ Themes
+
+* تعريف الثيمات المختلفة، بما في ذلك الثيم الليلي وتأثير الزجاج
+* تجربة مستخدم متناسقة واحترافية
+
+### 5️⃣ Utils
+
+* أدوات مثل **Responsive Text** لدعم جميع الأجهزة
+* تحسين تجربة الاستخدام ودعم تخصيص الثيمات
+
+---
+
+## 🛠️ المتطلبات لتشغيل التطبيق
+
+* Flutter SDK مثبت على جهازك
+* جهاز أو محاكي لتشغيل التطبيق (Android, iOS, Web)
+* معرفة أساسية بـ Dart وFlutter
+
+---
+
+## ▶️ خطوات التشغيل
+
+```bash
+git clone https://github.com/ahmedalaayq/Traffic-Light.git
+cd Traffic-Light
+flutter pub get
+flutter run   # اختر جهازك أو المحاكي
+```
+
+---
+
+## 📚 الفوائد التعليمية
+
+* **فهم دورة حياة الودجت**: `initState`, `didUpdateWidget`, `dispose`
+* **إدارة الحالة التفاعلية** باستخدام Streams وControllers
+* **تصميم واجهات جذابة** مع Glass Effect وأنيميشن سلس
+* **تصميم متجاوب ونصوص قابلة للتكيف** لجميع الأجهزة
+* **فصل الكود بين المنطق والواجهة** لتسهيل القراءة والصيانة
+
+---
+
+## 🤝 المساهمة
+
+المساهمة مرحب بها! سواء لتحسين الكود، الأنيميشن، أو الوثائق.
+يمكنك فتح Issue أو Pull Request.
+
+---
+
+## 📄 الترخيص
+
+هذا المشروع مفتوح المصدر تحت [رخصة MIT](LICENSE)
+
+---
